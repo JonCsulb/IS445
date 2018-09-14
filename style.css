@@ -11,16 +11,55 @@ header {
        /** text-decoration: underline; 
         text-align: center;**/
 
-        display: in-line;
+        display:inline;
 
         width:  10px;
         height: 10px;
         margin: 10px;
 
-        font-family: Arial, Helvetica, sans-serif;
-      
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+.intro {
+        background: white;
+        text-align: center;
+        }
+
+h3 { text-decoration: underline;
+    font-style: italic;
     }
 
+
+
+.container1{display:flex;
+            border:5px red solid;
+            padding:10px;
+            justify-content: center;
+            }
+
+
+.box1{flex:1;}
+.box2{flex:1;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    background: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-block-end: 1px;
+    width: 900px; 
+    text-align: center;
+
+}*/
 
 /*span{
     display: inline-block;
@@ -28,16 +67,3 @@ header {
     border-width: 1px;
     text-align: center;    
     } */
-
-
-body {
-    background: white;
-    font-family: Arial, Helvetica, sans-serif;
-    border-block-end: 1px;
-}
-
-.intro {
-        background: white;
-        text-align: center;
-
-}
