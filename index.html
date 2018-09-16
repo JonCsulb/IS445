@@ -10,9 +10,10 @@
 </head>
 
  <body>
-     <header>
+     <div>
          <h2><strong>Ngu, Jonathan</strong></h2>   <!-- add span here if bottom line under border is desired-->
-    </header>
+        <hr style="border-color: lightgreen; width:500px"/>
+    </div>
      
  
     <main>
@@ -24,8 +25,7 @@
 
 
 
-        <!---->
-       <!-- <p><img src="images/catpic.jpg" alt="Picture of a Cat"></p> --> 
+<p><img src="images/catpic.jpg" alt="Picture of a Cat" height="250" width="180" class="imgcenter"></p>
 
 
 
@@ -34,7 +34,7 @@
         
     <div class="container1" >
         <div class="box1">
-            <p>About Me</p>
+            <h2 style="text-align: center;">About Me</h2>
             <h3>Education</h3>
             <p>2018, Bachelor of IS, Csulb</p>
             <h3>Skills</h3>
@@ -52,11 +52,25 @@
 
 
         <div class="box2">
-            <p>Contact Me<p>
-            <p>Name:</p>
-            <p>E-mail:</p>
-            <p>Message:</p>
-            <p>Send your message</p>       
+            <h2>Contact Me</h2>
+            <div class="form-style">
+                <form>
+                    <p>Name:</p>
+                    <input type="text">
+                    <p>Email:</p>
+                    <input type="email">
+                    <p>Messages:</p>
+                    <textarea rows="8" type="text"></textarea><br/>
+                    <div style="width: 100%; display: flex">
+                        <button 
+                            type="submit" 
+                            style="margin-left: auto; margin-right: auto; margin-top: 30px;">
+                            Send Your Message
+                        </button>
+                    </div>
+                        
+                </form>
+            </div>     
         </div>
         
 
