@@ -1,0 +1,65 @@
+.ContainerOne{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        flex-direction: column;
+}
+
+.HeaderBox{
+        flex:1;
+        background-color:blue;
+        color: white;
+        order: 1;
+
+}
+
+a:link {
+        color: white;
+    }
+
+.NavigationBox{
+        flex: 1;
+        background-color: green;
+        color: white;
+        order: 2;
+        
+}
+
+.ArticleBox{
+        flex: 1;
+        background-color: pink;
+        color: white;
+        order: 3;
+        width: 60%;
+}
+
+.SectionOneBox{
+        flex: 1;
+        background-color:red;
+        color: white;
+        order: 4;
+        width: 60%;
+}
+
+.SectionTwoBox{
+        flex: 1;
+        background-color:red;
+        color: white;
+        order: 5;
+        width: 60%;
+
+}
+
+.AsideBox{
+        flex: 1;
+        background-color: lightskyblue;
+        color: white;
+        order: 6;
+}
+
+.FooterBox{
+        flex: 1;
+        background-color:green;
+        color: white;
+        order: 7;
+}
