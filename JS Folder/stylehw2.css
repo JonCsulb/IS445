@@ -5,64 +5,74 @@
         justify-content: center;
         margin: 0;
         color: white;
-        flex-wrap: warp;
         flex-direction: column;
 
 }
 
+
 .HeaderBox{
+        width: 800px;
         flex:1;
         background-color:blue;
+
 }
 
+
+a {
+        margin-right: 20px;
+        text-align: left;
+
+}
 a:link {
         color: white;
-    }
+}
+
 
 .NavigationBox{
         flex: 1;
         background-color: green;
 }
 
+
 .ArticleContainer{ 
         display: flex;
-        flex: 1;
         color: white;
-        order: 3;
         background-color: pink;
         width: 800px;
-        flex-wrap: wrap;
+        text-align: center;
         flex-direction: column;
+        
+        
 
 }
-
 
 
 .SectionOneBox{
         flex: 1;
         background-color:red;
-        flex-direction: column;
-        margin-bottom: 2%;
+        width: 60%;
+        margin-bottom: 10px;
 }
+
 
 .SectionTwoBox{
         flex: 1;
         background-color:red;
-        flex-direction: column;
-        margin-top: 2%;
-
+        width: 60%;
 }
+
 
 .AsideBox{
-        flex: 1;
+        flex: 2;
         background-color: lightskyblue;
-        width: 40%;
-        flex-direction: row;
+        width: 40%;  
 }
 
+
 .FooterBox{
-        flex: 1;
+        display: flex;
         background-color:green;
         width:800px;
         color: white;
+        justify-content: center;
 }
