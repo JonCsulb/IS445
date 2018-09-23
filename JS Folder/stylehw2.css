@@ -3,7 +3,6 @@
         text-align: center;
         width:800px;
         justify-content: center;
-        margin: 0;
         color: white;
         flex-direction: column;
 
@@ -14,6 +13,8 @@
         width: 800px;
         flex:1;
         background-color:blue;
+        margin-top: -20px;
+        padding-top: -20px;
 
 }
 
@@ -31,6 +32,7 @@ a:link {
 .NavigationBox{
         flex: 1;
         background-color: green;
+        padding-bottom: 20px;
 }
 
 
@@ -46,24 +48,36 @@ a:link {
 
 }
 
+.ArticleBox{
+        flex: 1;
+        background-color:pink;
+        flex-direction: column;
+        height: 50%;
+        width: 60%;
+        margin-top: 0%;
+}
+
 
 .SectionOneBox{
-        flex: 1;
-        background-color:red;
+        flex: 3;
+        background-color:brown;
+        flex-direction: column;
+        height: 80px;
         width: 60%;
-        margin-bottom: 10px;
 }
 
 
 .SectionTwoBox{
-        flex: 1;
-        background-color:red;
+        flex: 3;
+        background-color:brown;
+        flex-direction: column;
+        height: 80px;
         width: 60%;
 }
 
 
 .AsideBox{
-        flex: 2;
+        flex: 1;
         background-color: lightskyblue;
         width: 40%;  
 }
