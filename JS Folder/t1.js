@@ -9,7 +9,8 @@ function onClick ()
         {alert('Hello world after click')
         console.log('before alert')
     }
-
+    // command slash for comment shorcut
+    
      
 
 

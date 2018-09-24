@@ -5,9 +5,7 @@
         justify-content: center;
         color: white;
         flex-direction: column;
-
 }
-
 
 .HeaderBox{
         width: 800px;
@@ -32,28 +30,26 @@ a:link {
         background-color: green;
         padding-bottom: 20px;
         flex-direction: row;
-        height:40px;
+        height:20px;
 }
 
 
 .ArticleContainer{ 
         display: flex;
         color: white;
-        background-color: pink;
-        width: 800px;
-        text-align: center;
+        width: 480px;
         flex-direction: column;
-        height:300px;
-        
-
+        height:250px;
+        background-color: pink;
+        text-align: center;
 }
 
+}
 .ArticleBox{
         flex: 1;
         background-color:pink;
         flex-direction: column;
         height: 50%;
-        width: 60%;
         margin-top: 0%;
 }
 
@@ -63,7 +59,6 @@ a:link {
         background-color:brown;
         flex-direction: column;
         height: 80px;
-        width: 60%;
 }
 
 
@@ -72,12 +67,13 @@ a:link {
         background-color:brown;
         flex-direction: column;
         height: 80px;
-        width: 60%;
 }
 
 
 .AsideBox{
-        flex: 1;
+        display: flex;
+        color: white;
+        justify-content: center;
         background-color: lightskyblue;
         width: 40%;  
 }
@@ -89,5 +85,5 @@ a:link {
         width:800px;
         color: white;
         justify-content: center;
-        height:50px;
+        height:30px;
 }
