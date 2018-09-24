@@ -1,0 +1,94 @@
+.ContainerOne{
+        display: flex;
+        text-align: center;
+        width:800px;
+        justify-content: center;
+        color: white;
+        flex-direction: column;
+}
+
+.HeaderBox{
+        width: 800px;
+        flex:1;
+        background-color:blue;
+        height: 50px;
+}
+
+
+a {
+        margin-right: 20px;
+        text-align: left;
+
+}
+a:link {
+        color: white;
+}
+
+
+.NavigationBox{
+        flex: 1;
+        background-color: green;
+        padding-bottom: 20px;
+        flex-direction: row;
+        height:20px;
+        text-align: left;
+}
+
+.Test{
+        display: flex;
+        flex-direction: row;
+
+}
+
+
+.ArticleContainer{ 
+        display: flex;
+        color: white;
+        width: 480px;
+        flex-direction: column;
+        height:250px;
+        background-color: pink;
+        text-align: center;
+}
+
+
+.ArticleBox{
+        flex: 1;
+        background-color:pink;
+        height: 50%;
+        margin-top: 0%;
+}
+
+
+.SectionOneBox{
+        flex: 3;
+        background-color:brown;
+        height: 80px;
+}
+
+
+.SectionTwoBox{
+        flex: 3;
+        background-color:brown;
+        height: 80px;
+}
+
+
+.AsideBox{
+        display: flex;
+        color: white;
+        justify-content: center;
+        background-color: lightskyblue;
+        width: 320px;  
+        height: 250px;
+}
+
+
+.FooterBox{
+        display: flex;
+        background-color:green;
+        width:800px;
+        color: white;
+        justify-content: center;
+        height:30px;
+}
