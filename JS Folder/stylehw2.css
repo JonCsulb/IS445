@@ -31,6 +31,13 @@ a:link {
         padding-bottom: 20px;
         flex-direction: row;
         height:20px;
+        text-align: left;
+}
+
+.Test{
+        display: flex;
+        flex-direction: row;
+
 }
 
 
@@ -44,11 +51,10 @@ a:link {
         text-align: center;
 }
 
-}
+
 .ArticleBox{
         flex: 1;
         background-color:pink;
-        flex-direction: column;
         height: 50%;
         margin-top: 0%;
 }
@@ -57,7 +63,6 @@ a:link {
 .SectionOneBox{
         flex: 3;
         background-color:brown;
-        flex-direction: column;
         height: 80px;
 }
 
@@ -65,7 +70,6 @@ a:link {
 .SectionTwoBox{
         flex: 3;
         background-color:brown;
-        flex-direction: column;
         height: 80px;
 }
 
@@ -75,7 +79,8 @@ a:link {
         color: white;
         justify-content: center;
         background-color: lightskyblue;
-        width: 40%;  
+        width: 320px;  
+        height: 250px;
 }
 
 
