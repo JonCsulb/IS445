@@ -1,9 +1,31 @@
-const numberStr = prompt('Please input your number:')
+const Start = prompt('Please give Start Number:')
+const End   = prompt('Please give End Number:')
+const Step  = prompt('Please give Step Number:')
 
-const number = number(numberStr)
+// Convert and  Check input for non integers
+const StartNumber = Number(Start);
+const EndNumber   = Number(End);
+const StepNumber  = Number(Step);
 
-const result = number * 2
 
-const h3Element = document.getElementById ('output')
+if ((Number.isInteger(StartNumber+EndNumber+StepNumber) === false)
+     || StepNumber == 0)
+    {
+        alert("No") 
+    }
+else
+    {
+        alert("working")
+    }
 
-h3Element.innerHTML = result
+
+
+
+Number.isInteger(StartNumber);
+Number.isInteger(EndNumber);
+Number.isInteger(StepNumber);
+
+
+
+
+
