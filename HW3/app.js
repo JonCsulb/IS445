@@ -6,18 +6,18 @@ const Step  = prompt('Please give Step Number:')
 const StartNumber = Number(Start);
 const EndNumber   = Number(End);
 const StepNumber  = Number(Step);
-
+let result = "Result"
 
 if ((Number.isInteger(StartNumber+EndNumber+StepNumber) === false)
      || StepNumber == 0)
     {
-        alert("No") 
+        result = ("Invalid integer input or step number is 0, please reload and try again") 
     }
 else
     {
-        alert("working")
+        result = ("working")
     }
-
+writeOutput(result)
 
 
 
@@ -25,7 +25,10 @@ Number.isInteger(StartNumber);
 Number.isInteger(EndNumber);
 Number.isInteger(StepNumber);
 
-
+function writeOutput(result){
+    const h3Element = document.getElementById ('output')
+    h3Element.innerHTML = result
+}
 
 
 
