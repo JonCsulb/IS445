@@ -1,84 +1,77 @@
-const Start = prompt('Please give Start Number:')
-const End   = prompt('Please give End Number:')
-const Step  = prompt('Please give Step Number:')
-const NumArray = [] 
-const BinArray = []
-// Convert input to number
-const StartNumber = Number(Start);
-const EndNumber   = Number(End);
-const StepNumber  = Number(Step);
 
+// json is a type of data where object is listed in an array
+// ajax is just async, javascript, json
+// xmlhttpreqeuest sort by alphabets
 
-if ((Number.isInteger(StartNumber+EndNumber+StepNumber) === false)
-     || StepNumber == 0)
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function()
     {
-        let Result = ("Invalid integer input or step number is 0, please reload and try again") 
-        writeOutput(Result)
-    }
-else
-    {   
-    ArrayFunction(StartNumber,EndNumber,StepNumber)
-      let ResultArray = NumArray.toString();
+        if (this.readyState == 4 && this.status == 200) 
+            {
 
-      let ResultSum = ArraySum(NumArray)
+                var myData = JSON.parse(this.responseText) // ************
+                console.log(myData.length)
+                // create sorted data
+                var sorted = []
+                console.log(typeof myData)
+                for (i=0; i< myData.length; i++)
+                    {
+                        console.log(myData[i].email);
+                        sorted.push(myData[i].email + '<br>')
+                        // grab email of first object
+                    }
+                    sorted = sorted.sort()
+                document.getElementById("output1").innerHTML = sorted.join(' '); // replace myData with sortedData
+           
+            }
+    };
 
-      let ResultBin = BinArray.toString();
-      let Result =  'The Generated Array is : ' + ResultArray + '<br>' 
-                    + 'The Sum is : ' + ResultSum + '<br>'
-                    + 'The Binary of of absolute values are : ' + ResultBin   
-      writeOutput(Result)
-    }
+    xhttp.open( "Get" , "https://jsonplaceholder.typicode.com/users", true);
+    xhttp.send();
 
 
 
-//                                          ***FUNCTIONS***
-// Adds or Subtracts based on StepNum and adds stuff into an array
-function ArrayFunction (ArrayStart,ArrayEnd,ArrayStep)
-{
-    if (ArrayStep>0)
-        {
-            for(let i = ArrayStart; i <= ArrayEnd; i = i + ArrayStep)
-                {
-                    NumArray.push(i)
-                    BinArray.push(dec2bin(i))
-                }
-            return NumArray;
-            return BinArray;
-        }
-    else
-        {
-            for(let i = ArrayStart; i >= ArrayEnd; i = i + ArrayStep)
-                {
-                    NumArray.push(i) 
-                    BinArray.push(dec2bin(i))
-                }
-            return NumArray;
-            return BinArray;
-        }
+
+// fetch username and sort by length
+fetch  ("https://jsonplaceholder.typicode.com/users")
+.then  ( response => response.json())                   
+.then (data => {                                      
+            const sortData = data.sort ( (a,b) => a.username.length -b.username.length);
+            console.log(typeof sortData);
+            sortLength( JSON.stringify(sortData));
+
+           
+   })
+    
+.catch ( error => console.log('There was an error:' , error))
+
+
+
+
+
+
+//fetch  ("https://jsonplaceholder.typicode.com/users")
+//.then  ( sortLength (response)  )
+//.catch ( error => console.log('There was an error:' , error) )
+
+
+function sortLength (ourData){
+    var needSort = []
+    var LOL = JSON.parse(ourData)
+   // console.log(LOL + "HALLO")
+   
+   for (i=0; i< LOL.length; i++)
+                     {
+                         console.log(i)
+                         console.log(LOL[i].username);
+                         needSort.push(LOL[i].username + '<br>');
+                         console.log(needSort)
+                    }
+
+document.getElementById("output2").innerHTML = needSort.join(' ');              
 }
 
-
-
-// Sum of all the stuff in array using reduce
-function ArraySum (NumArray)
-{
-    const SumArray = NumArray.reduce((total,amount) => total+amount)
-    return SumArray;
-}
-
-
-// Change to binary function
-function dec2bin(dec) {
-    return (dec >>>0).toString(2);
-    // the >>> rightshift to 0 to remove the sign
-    // make it able to handle negative number
-}
-
-
-function writeOutput(result){
-    const h3Element = document.getElementById ('output')
-    h3Element.innerHTML = result
-}
 
 
 

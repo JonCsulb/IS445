@@ -1,61 +1,77 @@
-// const UserNames = 
-// const UserEmails = 
-const Url = 'https://jsonplaceholder.typicode.com/users'
-var xhttp = new XMLHttpRequest();
-var = [];
-//let promiseFetch = new Promise (function(resolve,reject){
-//
-//});
 
+// json is a type of data where object is listed in an array
+// ajax is just async, javascript, json
+// xmlhttpreqeuest sort by alphabets
 
+    var xhttp = new XMLHttpRequest();
 
-var myArray = [];
-// fetch username and sort by length
-fetch  ('https://jsonplaceholder.typicode.com/users')
-
-    .then  ( response => response.json)  //transfrom json data to javascript obj
-    .then (data => {                     // sort data
-            const sortData = data;
-            console.log(sortData);       // sort by user length
-    })
-    .catch ( error => console.log('There was an error:' , error))
-
-
-
-
-function getData = 
-
-
-
-
-
-var userName = 
-[
+    xhttp.onreadystatechange = function()
     {
-    "Id":
-    "UserName":
-    "UserEmail":
-    }
+        if (this.readyState == 4 && this.status == 200) 
+            {
 
-]
+                var myData = JSON.parse(this.responseText) // ************
+                console.log(myData.length)
+                // create sorted data
+                var sorted = []
+                console.log(typeof myData)
+                for (i=0; i< myData.length; i++)
+                    {
+                        console.log(myData[i].email);
+                        sorted.push(myData[i].email + '<br>')
+                        // grab email of first object
+                    }
+                    sorted = sorted.sort()
+                document.getElementById("output1").innerHTML = sorted.join(' '); // replace myData with sortedData
+           
+            }
+    };
+
+    xhttp.open( "Get" , "https://jsonplaceholder.typicode.com/users", true);
+    xhttp.send();
+
+
+
+
+// fetch username and sort by length
+fetch  ("https://jsonplaceholder.typicode.com/users")
+.then  ( response => response.json())                   
+.then (data => {                                      
+            const sortData = data.sort ( (a,b) => a.username.length -b.username.length);
+            console.log(typeof sortData);
+            sortLength( JSON.stringify(sortData));
+
+           
+   })
+    
+.catch ( error => console.log('There was an error:' , error))
 
 
 
 
 
 
+//fetch  ("https://jsonplaceholder.typicode.com/users")
+//.then  ( sortLength (response)  )
+//.catch ( error => console.log('There was an error:' , error) )
 
 
+function sortLength (ourData){
+    var needSort = []
+    var LOL = JSON.parse(ourData)
+   // console.log(LOL + "HALLO")
+   
+   for (i=0; i< LOL.length; i++)
+                     {
+                         console.log(i)
+                         console.log(LOL[i].username);
+                         needSort.push(LOL[i].username + '<br>');
+                         console.log(needSort)
+                    }
 
-function writeOutput(result){
-    const h3Element = document.getElementById ('output')
-    h3Element.innerHTML = result
+document.getElementById("output2").innerHTML = needSort.join(' ');              
 }
 
 
 
-
-
-// https://jsonplaceholder.typicode.com/users 
-// use callback syntax use XMLHTTPREQUEST to get user email and sort by alphabets
 
