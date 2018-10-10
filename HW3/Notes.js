@@ -15,6 +15,18 @@ function writeOutput(result){
 }
 
 
+Ask('Do you want triple or dec2bin?',triple)
+    const answer = confirm(question)
+    let result
+    if (answer) {
+            result = yes()
+
+    } else{
+            result = no()
+    writeOutput(result)
+
+}
+
 
 
 function triple(num) {
