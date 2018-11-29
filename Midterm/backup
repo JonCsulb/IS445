@@ -1,0 +1,12 @@
+for (i = 1; i < userNum + 1; i++)
+            {
+
+                for (j = 1; j <userNum +1; j++){
+                    console.log(' + j +')
+                }
+
+                
+                console.log(userNum * i)
+                document.write(i*userNum + " " + "</td>") 
+
+            }
